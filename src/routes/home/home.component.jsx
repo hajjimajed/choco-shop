@@ -43,6 +43,7 @@ const Home = () => {
 
             <Directory categories={categories} />
 
+
         </div>
     )
 

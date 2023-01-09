@@ -1,0 +1,36 @@
+.button-container {
+    width: 90px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+
+    &.google-sign-in {
+        background-color: #d4a373;
+        color: white;
+
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    &.inverted {
+        background-color: white;
+        color: black;
+
+        &:hover {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+    }
+
+}
