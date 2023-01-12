@@ -22,7 +22,6 @@ const SignInForm = () => {
     const { email, password } = formFields;
 
 
-    const { setCurrentUser } = useContext(UserContext);
 
 
     const resetFormFields = () => {
@@ -31,8 +30,7 @@ const SignInForm = () => {
 
 
     const signInWithGoogle = async () => {
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
     }
 
 
@@ -43,7 +41,6 @@ const SignInForm = () => {
         try {
             const { user } = await signInAuthWithEmailAndPassword(email, password);
 
-            setCurrentUser(user);
 
             resetFormFields();
 

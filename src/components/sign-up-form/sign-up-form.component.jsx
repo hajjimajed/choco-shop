@@ -25,7 +25,6 @@ const SignUpForm = () => {
     const { displayName, email, password, confirmPassword } = formFields;
 
 
-    const { setCurrentUser } = useContext(UserContext);
 
 
     const resetFormFields = () => {
@@ -43,7 +42,6 @@ const SignUpForm = () => {
         try {
             const { user } = await createAuthUserWithEmailAndPassword(email, password);
 
-            setCurrentUser(user);
 
             await createUserDocumentFromAuth(user, { displayName });
 
