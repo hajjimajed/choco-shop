@@ -1,16 +1,27 @@
 import './gifts.styles.scss'
 
-import { Outlet } from "react-router-dom";
+import { useContext } from 'react';
 
+import { GiftContext } from '../../contexts/gifts.context';
+
+import ProductCard from '../../components/product-card/product-card.component';
 
 
 const Gifts = () => {
 
-    return (
-        <div>
-            <Outlet />
+    const { gifts } = useContext(GiftContext);
 
-            <h1>I'm the gifts pages</h1>
+    return (
+        <div className='products-container'>
+
+            {
+
+                gifts.map((gift) => (
+                    <ProductCard key={gift.id} product={gift}></ProductCard>
+                ))
+
+            }
+
         </div>
     )
 

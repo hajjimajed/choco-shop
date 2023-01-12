@@ -1,16 +1,26 @@
 import './candys.styles.scss'
 
-import { Outlet } from "react-router-dom";
 
+import { useContext } from 'react';
+
+import { CandyContext } from '../../contexts/candys.context';
+
+import ProductCard from '../../components/product-card/product-card.component';
 
 
 const Candys = () => {
 
-    return (
-        <div>
-            <Outlet />
+    const { candys } = useContext(CandyContext)
 
-            <h1>I'm the candys pages</h1>
+    return (
+        <div className='products-container'>
+
+            {
+                candys.map((candy) => (
+                    <ProductCard key={candy.id} product={candy}></ProductCard>
+                ))
+            }
+
         </div>
     )
 
