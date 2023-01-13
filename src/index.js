@@ -14,6 +14,8 @@ import { CandyProvider } from './contexts/candys.context';
 
 import { GiftProvider } from './contexts/gifts.context';
 
+import { CartProvider } from './contexts/cart.context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -22,7 +24,9 @@ root.render(
         <ProductsProvider>
           <CandyProvider>
             <GiftProvider>
-              <App />
+              <CartProvider>
+                <App />
+              </CartProvider>
             </GiftProvider>
           </CandyProvider>
         </ProductsProvider>
