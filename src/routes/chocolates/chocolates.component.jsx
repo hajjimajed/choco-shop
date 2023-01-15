@@ -1,26 +1,24 @@
 import './chocolates.styles.scss'
 
-import ProductCard from '../../components/product-card/product-card.component';
+import ChocolatesPreview from '../chocolates-preview/chocolates-preview.component';
 
-import { ProductsContext } from '../../contexts/products.context';
+import { Route, Routes } from 'react-router-dom';
 
-import { useContext } from 'react';
+import ChocolatesCategory from '../chocolates-category/chocolates-category.component';
+
+
+
 
 
 const Chocolates = () => {
 
-    const { products } = useContext(ProductsContext);
+
 
     return (
-        <div className='products-container'>
-
-            {
-                products.map((product) => (
-                    <ProductCard key={product.id} product={product}></ProductCard>
-                ))
-            }
-
-        </div>
+        <Routes>
+            <Route index element={<ChocolatesPreview />}></Route>
+            <Route path=':chocolatesCategory' element={<ChocolatesCategory />}></Route>
+        </Routes>
     )
 
 }

@@ -8,14 +8,14 @@ import { addCollectionAndDocuments } from "../utils/firebase/firebase.utils.js";
 
 import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
 
-export const ProductsContext = createContext({
-    PRODUCTS: []
+export const ChocolatesContext = createContext({
+    chocolatesMap: {}
 })
 
-export const ProductsProvider = ({ children }) => {
+export const ChocolatesProvider = ({ children }) => {
 
 
-    const [products, setProducts] = useState([]);
+    const [chocolatesMap, setChocolatesMap] = useState({});
 
 
     useEffect(() => {
@@ -24,6 +24,8 @@ export const ProductsProvider = ({ children }) => {
             const chocolateMap = await getCategoriesAndDocuments('chocolates');
 
             console.log(chocolateMap);
+
+            setChocolatesMap(chocolateMap);
 
         }
 
@@ -40,12 +42,12 @@ export const ProductsProvider = ({ children }) => {
     }, [])
 */
 
-    const value = { products };
+    const value = { chocolatesMap };
 
     return (
-        <ProductsContext.Provider value={value}>
+        <ChocolatesContext.Provider value={value}>
             {children}
-        </ProductsContext.Provider>
+        </ChocolatesContext.Provider>
     )
 
 

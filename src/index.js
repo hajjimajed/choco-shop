@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { UserProvider } from './contexts/user.context';
 
-import { ProductsProvider } from './contexts/products.context';
+import { ChocolatesProvider } from './contexts/chocolates.context';
 
 import { CandyProvider } from './contexts/candys.context';
 
@@ -21,7 +21,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <ChocolatesProvider>
           <CandyProvider>
             <GiftProvider>
               <CartProvider>
@@ -29,7 +29,7 @@ root.render(
               </CartProvider>
             </GiftProvider>
           </CandyProvider>
-        </ProductsProvider>
+        </ChocolatesProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
