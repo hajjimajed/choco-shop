@@ -1,18 +1,40 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
-import CANDYS from '../candy-data.json'
+
+import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
 
 
 export const CandyContext = createContext({
-    CANDYS: []
+    candysMap: {}
 })
 
+
+
 export const CandyProvider = ({ children }) => {
-    const [candys] = useState(CANDYS)
-    const value = { candys }
+
+    const [candysMap, setCandysMap] = useState({})
+
+    useEffect(() => {
+
+        const getCandysMap = async () => {
+            const candyMap = await getCategoriesAndDocuments('candys')
+
+            console.log(candyMap)
+
+            setCandysMap(candyMap)
+        }
+
+        getCandysMap();
+
+    }, [])
+
+
+
+    const value = { candysMap }
+
 
     return (
-        <CandyContext.Provider value={value}>
+        <CandyContext.Provider value={value} >
             {children}
         </CandyContext.Provider>
     )

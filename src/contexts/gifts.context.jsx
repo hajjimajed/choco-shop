@@ -1,20 +1,41 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
-import GIFTS from '../gift-data.json'
+
+import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
+
+
 
 
 export const GiftContext = createContext({
-    GIFTS: []
+    giftsMap: {}
 })
 
 
 export const GiftProvider = ({ children }) => {
 
-    const [gifts] = useState(GIFTS);
-    const value = { gifts }
+    const [giftsMap, setGiftsMap] = useState({})
+
+    useEffect(() => {
+
+        const getGiftsMap = async () => {
+            const giftMap = await getCategoriesAndDocuments('gifts')
+
+            console.log(giftMap);
+
+            setGiftsMap(giftMap)
+        }
+
+        getGiftsMap();
+
+    }, [])
+
+
+
+    const value = { giftsMap }
+
 
     return (
-        <GiftContext.Provider value={value}>
+        <GiftContext.Provider value={value} >
             {children}
         </GiftContext.Provider>
     )
