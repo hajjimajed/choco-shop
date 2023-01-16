@@ -35,17 +35,19 @@
         height: 35px;
         border: none;
         border-radius: 20px;
-        background-color: #d4a373;
-        color: white;
-        transition: 0.2s ease-in-out all;
+
         text-align: center;
         padding-top: 5px;
 
 
 
-        &:hover {
-            background-color: #000000;
-        }
+
+    }
+
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }

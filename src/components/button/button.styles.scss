@@ -1,8 +1,8 @@
 .button-container {
-    width: 90px;
-    height: 35px;
+    width: 200px;
+    height: 45px;
     border: none;
-    border-radius: 20px;
+    border-radius: 2px;
     color: black;
     font-size: 15px;
     cursor: pointer;
@@ -23,26 +23,27 @@
     }
 
     &.google-sign-up {
-        background-color: #6494dc;
+        background-color: #457b9d;
         color: white;
 
         &:hover {
-            background-color: #000000;
+            background-color: #5d9bc2;
         }
     }
 
     &.google {
-        background-color: #e35151;
+        background-color: #e63946;
         color: white;
 
         &:hover {
-            background-color: #000000;
+            background-color: #f15e6a;
         }
     }
 
     &.inverted {
-        background-color: white;
-        color: black;
+        background-color: #6a4c93;
+        color: white;
+
 
         &:hover {
             background-color: black;
