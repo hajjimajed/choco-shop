@@ -17,7 +17,7 @@ const CategoryPreview = ({ title, products }) => {
     return (
         <div className='category-preview-container'>
             <h2>
-                <span className='title' onClick={navigationHandler}>{title.toUpperCase()}</span>
+                <span className='title' onClick={navigationHandler}>{title}</span>
             </h2>
             <div className='preview'>
 

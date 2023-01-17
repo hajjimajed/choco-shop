@@ -6,13 +6,17 @@
     align-items: center;
 
     .title {
-        font-size: 28px;
+        font-size: 25px;
         margin-bottom: 25px;
         cursor: pointer;
         transition: 0.1s ease-in-out all;
+        font-family: 'Lobster', cursive;
+        font-weight: lighter;
+        text-transform: capitalize;
+
 
         &:hover {
-            color: #6a4c93
+            color: #6a4c93;
         }
     }
 

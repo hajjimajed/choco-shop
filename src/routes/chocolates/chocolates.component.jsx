@@ -15,6 +15,8 @@ const Chocolates = () => {
 
 
     return (
+
+
         <Routes>
             <Route index element={<ChocolatesPreview />}></Route>
             <Route path=':chocolatesCategory' element={<ChocolatesCategory />}></Route>

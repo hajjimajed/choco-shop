@@ -6,6 +6,7 @@
     align-items: center;
     align-content: center;
     margin-bottom: 25px;
+    font-family: 'Lobster', cursive;
 
     .logo-container {
         height: 100%;
@@ -22,22 +23,33 @@
         .nav-link {
             padding: 10px 15px;
             cursor: pointer;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 500;
+            transition: 0.1s ease-in-out all;
+            color: #f72585;
+
+            &:hover {
+                color: #ff70a6;
+            }
         }
     }
 
     .nav-btn {
         cursor: pointer;
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 22px;
+        font-weight: 500;
         width: 90px;
         height: 35px;
         border: none;
         border-radius: 20px;
+        color: #f72585;
 
         text-align: center;
         padding-top: 5px;
+
+        &:hover {
+            color: #ff70a6;
+        }
 
 
 
