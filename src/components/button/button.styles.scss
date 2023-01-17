@@ -5,8 +5,13 @@
     border-radius: 2px;
     color: black;
     font-size: 15px;
+    font-weight: 900;
     cursor: pointer;
     transition: 0.2s ease-in-out all;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background-color: white;
@@ -46,7 +51,7 @@
 
 
         &:hover {
-            background-color: black;
+            background-color: #8568ad;
             color: white;
             border: none;
         }

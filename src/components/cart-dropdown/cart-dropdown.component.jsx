@@ -25,8 +25,8 @@ const CartDropdown = () => {
                 {cartItems.map(item => <CartItem key={item.id} cartItem={item} />)}
             </div>
             <div className='cart-dropdown-footer'>
-                <Button onClick={goToCheckoutHandler}>Checkout</Button>
-                <span>Total: $</span>
+                <Button buttonType='inverted' onClick={goToCheckoutHandler}>Checkout</Button>
+
             </div>
 
 
