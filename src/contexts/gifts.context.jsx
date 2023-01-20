@@ -20,7 +20,6 @@ export const GiftProvider = ({ children }) => {
         const getGiftsMap = async () => {
             const giftMap = await getCategoriesAndDocuments('gifts')
 
-            console.log(giftMap);
 
             setGiftsMap(giftMap)
         }

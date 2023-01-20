@@ -1,4 +1,4 @@
-import './chocolates-category.styles.scss'
+import './product-page.styles.scss'
 
 import { useParams } from 'react-router-dom';
 
@@ -6,10 +6,9 @@ import { useContext, useEffect, useState } from 'react';
 
 import { ChocolatesContext } from '../../contexts/chocolates.context';
 
-import ProductCard from '../../components/product-card/product-card.component';
+import ProductPageView from '../../components/product-page-view/product-page-view.component';
 
-
-const ChocolatesCategory = () => {
+const ProductPage = () => {
 
     const { chocolatesCategory } = useParams()
     const { chocolatesMap } = useContext(ChocolatesContext)
@@ -20,20 +19,34 @@ const ChocolatesCategory = () => {
         setProducts(chocolatesMap[chocolatesCategory])
     }, [chocolatesCategory, chocolatesMap])
 
+
+
+
+
+
+    const routeAdr = window.location.pathname.split("/").pop();
+
+
+
     return (
-
-
-        <div className='chocolates-category-container'>
+        <div>
 
             {
                 products &&
-                products.map((product) => <ProductCard key={product.id} product={product} />)
+                products.map((product) => {
+
+                    if (product.route == routeAdr) {
+                        return <ProductPageView key={product.id} product={product}></ProductPageView>
+                    }
+                })
             }
 
-        </div>
+            <h2></h2>
 
+
+        </div>
     )
 
 }
 
-export default ChocolatesCategory;
+export default ProductPage;

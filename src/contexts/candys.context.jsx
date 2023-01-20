@@ -19,7 +19,6 @@ export const CandyProvider = ({ children }) => {
         const getCandysMap = async () => {
             const candyMap = await getCategoriesAndDocuments('candys')
 
-            console.log(candyMap)
 
             setCandysMap(candyMap)
         }

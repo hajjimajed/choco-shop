@@ -23,7 +23,6 @@ export const ChocolatesProvider = ({ children }) => {
         const getChocolatesMap = async () => {
             const chocolateMap = await getCategoriesAndDocuments('chocolates');
 
-            console.log(chocolateMap);
 
             setChocolatesMap(chocolateMap);
 
