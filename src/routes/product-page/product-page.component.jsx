@@ -23,7 +23,6 @@ const ProductPage = () => {
 
 
 
-
     const routeAdr = window.location.pathname.split("/").pop();
 
 
