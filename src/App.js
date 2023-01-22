@@ -7,6 +7,7 @@ import Candys from './routes/candys/candys.component';
 import Gifts from './routes/gifts/gifts.components';
 import Authentification from './routes/authentification/authentification.component';
 import Checkout from './routes/checkout/checkout.component';
+import ProductPage from './routes/product-page/product-page.component';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='gifts/*' element={<Gifts />} />
         <Route path='auth' element={<Authentification />} />
         <Route path='checkout' element={<Checkout />} />
+        <Route path='/*' element={<ProductPage />} />
 
       </Route>
     </Routes>

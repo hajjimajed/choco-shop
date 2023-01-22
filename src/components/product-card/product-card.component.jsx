@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 
     const navigate = useNavigate();
 
-    const onNavigateHandler = () => navigate(route)
+    const onNavigateHandler = () => navigate(`/${route}`)
 
     const { addItemToCart } = useContext(CartContext);
 
@@ -38,6 +38,7 @@ const ProductCard = ({ product }) => {
                 <span className='price'>$ {price}</span>
             </div>
             <Button buttonType='inverted' onClick={addProductToCart}>ADD TO CART</Button>
+
 
 
         </div>

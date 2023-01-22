@@ -6,7 +6,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import ChocolatesCategory from '../chocolates-category/chocolates-category.component';
 
-import ProductPage from '../product-page/product-page.component';
 
 
 
@@ -20,7 +19,6 @@ const Chocolates = () => {
         <Routes>
             <Route index element={<ChocolatesPreview />}></Route>
             <Route path=':chocolatesCategory' element={<ChocolatesCategory />}></Route>
-            <Route path=':chocolatesCategory/*' element={<ProductPage />}></Route>
 
 
         </Routes>
