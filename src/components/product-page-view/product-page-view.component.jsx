@@ -1,16 +1,12 @@
 import './product-page-view.styles.scss'
 
-import { useContext } from 'react';
-
-import { CartContext } from '../../contexts/cart.context';
+import { addItemToCart } from '../../store/cart/cart.action';
 
 import Button from '../button/button.component';
 
 const ProductPageView = ({ product }) => {
 
     const { name, price, imageUrl } = product;
-
-    const { addItemToCart } = useContext(CartContext);
 
     const addProductToCart = () => addItemToCart(product);
 

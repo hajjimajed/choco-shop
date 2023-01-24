@@ -2,14 +2,11 @@ import './product-card.styles.scss'
 
 import Button from '../button/button.component';
 
-import { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 
-import { CartContext } from '../../contexts/cart.context';
-
-import { Link, useNavigate } from "react-router-dom";
-
-
-
+import { useSelector, useDispatch } from 'react-redux';
+import { addItemToCart } from '../../store/cart/cart.action';
+import { selectCartItems } from '../../store/cart/cart.selector';
 
 
 const ProductCard = ({ product }) => {
@@ -17,12 +14,11 @@ const ProductCard = ({ product }) => {
     const { name, price, imageUrl, route } = product;
 
     const navigate = useNavigate();
-
     const onNavigateHandler = () => navigate(`/${route}`)
 
-    const { addItemToCart } = useContext(CartContext);
-
-    const addProductToCart = () => addItemToCart(product);
+    const dispatch = useDispatch();
+    const cartItems = useSelector(selectCartItems);
+    const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
 
 
