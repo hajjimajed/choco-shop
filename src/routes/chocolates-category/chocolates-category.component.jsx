@@ -2,19 +2,19 @@ import './chocolates-category.styles.scss'
 
 import { useParams } from 'react-router-dom';
 
-import { useContext, useEffect, useState } from 'react';
-
-import { ChocolatesContext } from '../../contexts/chocolates.context';
+import { useEffect, useState } from 'react';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
+import { useSelector } from 'react-redux';
+import { selectChocolatesMap } from '../../store/chocolates/chocolates.selector';
 
 const ChocolatesCategory = () => {
 
-    const { chocolatesCategory } = useParams()
-    const { chocolatesMap } = useContext(ChocolatesContext)
+    const { chocolatesCategory } = useParams();
+    const chocolatesMap = useSelector(selectChocolatesMap);
 
-    const [products, setProducts] = useState(chocolatesMap[chocolatesCategory])
+    const [products, setProducts] = useState(chocolatesMap[chocolatesCategory]);
 
     useEffect(() => {
         setProducts(chocolatesMap[chocolatesCategory])

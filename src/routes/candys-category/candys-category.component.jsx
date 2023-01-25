@@ -2,18 +2,19 @@ import './candys-category.styles.scss'
 
 import { useParams } from 'react-router-dom';
 
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { CandyContext } from '../../contexts/candys.context';
+import { useSelector } from 'react-redux';
+import { selectCandysMap } from '../../store/candys/candys.selector';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
 const CandysCategory = () => {
 
     const { candysCategory } = useParams();
-    const { candysMap } = useContext(CandyContext)
+    const candysMap = useSelector(selectCandysMap);
 
-    const [products, setProducts] = useState(candysMap[candysCategory])
+    const [products, setProducts] = useState(candysMap[candysCategory]);
 
     useEffect(() => {
 

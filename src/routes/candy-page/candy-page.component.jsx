@@ -1,15 +1,14 @@
 import './candy-page.styles.scss'
 
-import { CandyContext } from '../../contexts/candys.context';
-
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
+import { selectCandysMap } from '../../store/candys/candys.selector';
 
 import ProductPageView from '../../components/product-page-view/product-page-view.component';
 
 
 const CandyPage = () => {
 
-    const { candysMap } = useContext(CandyContext);
+    const candysMap = useSelector(selectCandysMap);
 
     const routeAdr = window.location.pathname.split("/").pop();
 

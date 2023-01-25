@@ -5,9 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter } from 'react-router-dom'
-import { ChocolatesProvider } from './contexts/chocolates.context';
-import { CandyProvider } from './contexts/candys.context';
-import { GiftProvider } from './contexts/gifts.context';
 
 import { Provider } from 'react-redux';
 import { store, persistor } from './store/store'
@@ -19,13 +16,7 @@ root.render(
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <ChocolatesProvider>
-            <CandyProvider>
-              <GiftProvider>
-                <App />
-              </GiftProvider>
-            </CandyProvider>
-          </ChocolatesProvider>
+          <App />
         </BrowserRouter>
       </PersistGate>
     </Provider>
