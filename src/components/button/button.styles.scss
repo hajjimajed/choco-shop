@@ -45,6 +45,16 @@
         }
     }
 
+    &.add {
+        background-color: #00b4d8;
+        color: white;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: #0088a3;
+        }
+    }
+
     &.inverted {
         background-color: #6a4c93;
         color: white;

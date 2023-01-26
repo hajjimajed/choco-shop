@@ -4,6 +4,7 @@
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
+    padding: 0px 100px;
 
     .title {
         font-size: 25px;
@@ -25,5 +26,6 @@
         grid-template-columns: repeat(4, 1fr);
         column-gap: 20px;
         margin: 50px 0;
+        padding-bottom: 100px;
     }
 }

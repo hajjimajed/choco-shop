@@ -5,7 +5,8 @@ const BUTTON_TYPE_CLASSES = {
     signIn: 'google-sign-in',
     signUp: 'google-sign-up',
     inverted: 'inverted',
-    google: 'google'
+    google: 'google',
+    add: 'add'
 }
 
 

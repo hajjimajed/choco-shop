@@ -40,12 +40,14 @@ const ProductCard = ({ product }) => {
         <div className='product-card-container'>
 
             <img src={imageUrl} alt={name} />
-
-            <div className='footer'>
-                <span className='name' onClick={onNavigateHandler} >{name}</span>
-                <span className='price'>$ {price}</span>
+            <div className='add'>
+                <Button id='btn1' buttonType='add' onClick={addProductToCart}>+ Add</Button>
             </div>
-            <Button buttonType='inverted' onClick={addProductToCart}>ADD TO CART</Button>
+            <div className='footer'>
+                <span className='price'>${price}</span>
+                <span className='name' onClick={onNavigateHandler} >{name}</span>
+            </div>
+            <Button id='btn2' onClick={onNavigateHandler} buttonType='inverted' >Details</Button>
 
 
 
