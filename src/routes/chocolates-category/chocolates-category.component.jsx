@@ -6,13 +6,13 @@ import { useEffect, useState } from 'react';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
-import { useSelector } from 'react-redux';
-import { selectChocolatesMap } from '../../store/chocolates/chocolates.selector';
+import { useContext } from 'react';
+import { ChocolatesContext } from '../../contexts/chocolates.context';
 
 const ChocolatesCategory = () => {
 
     const { chocolatesCategory } = useParams();
-    const chocolatesMap = useSelector(selectChocolatesMap);
+    const { chocolatesMap } = useContext(ChocolatesContext);
 
     const [products, setProducts] = useState(chocolatesMap[chocolatesCategory]);
 

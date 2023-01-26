@@ -2,17 +2,16 @@ import './gifts-category.styles.scss'
 
 import { useParams } from 'react-router-dom';
 
-import { useSelector } from 'react-redux';
-import { selectGiftsMap } from '../../store/gifts/gifts.selector';
+import { GiftContext } from '../../contexts/gifts.context';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
 const GiftsCategory = () => {
 
     const { giftsCategory } = useParams();
-    const giftsMap = useSelector(selectGiftsMap);
+    const { giftsMap } = useContext(GiftContext);
 
     const [products, setProducts] = useState(giftsMap[giftsCategory])
 

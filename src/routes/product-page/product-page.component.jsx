@@ -1,14 +1,14 @@
 import './product-page.styles.scss'
 
-import { useSelector } from 'react-redux';
-import { selectChocolatesMap } from '../../store/chocolates/chocolates.selector';
+import { useContext } from 'react';
+import { ChocolatesContext } from '../../contexts/chocolates.context';
 
 import ProductPageView from '../../components/product-page-view/product-page-view.component';
 
 
 const ProductPage = () => {
 
-    const chocolatesMap = useSelector(selectChocolatesMap);
+    const { chocolatesMap } = useContext(ChocolatesContext);
 
     const routeAdr = window.location.pathname.split("/").pop();
 

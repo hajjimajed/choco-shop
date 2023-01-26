@@ -1,14 +1,12 @@
 import { useContext, Fragment } from "react";
 
-import { selectGiftsMap } from "../../store/gifts/gifts.selector";
-
-import { useSelector } from "react-redux";
+import { GiftContext } from "../../contexts/gifts.context";
 
 import CategoryPreview from "../../components/category-preview/category-preview.component";
 
 const GiftsPreview = () => {
 
-    const giftsMap = useSelector(selectGiftsMap);
+    const { giftsMap } = useContext(GiftContext);
 
     return (
         <Fragment>

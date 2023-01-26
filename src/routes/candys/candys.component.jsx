@@ -6,20 +6,9 @@ import CandysCategory from '../candys-category/candys-category.component';
 
 import { Route, Routes } from 'react-router-dom';
 
-import { useDispatch } from 'react-redux';
-
-import { useEffect } from 'react';
-
-import { fetchCandysAsync } from '../../store/candys/candys.action';
 
 
 const Candys = () => {
-
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchCandysAsync());
-    }, [])
 
     return (
 

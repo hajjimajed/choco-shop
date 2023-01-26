@@ -10,13 +10,23 @@ import { Provider } from 'react-redux';
 import { store, persistor } from './store/store'
 import { PersistGate } from 'redux-persist/integration/react';
 
+import { ChocolatesProvider } from './contexts/chocolates.context';
+import { CandyProvider } from './contexts/candys.context';
+import { GiftProvider } from './contexts/gifts.context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <CandyProvider>
+            <ChocolatesProvider>
+              <GiftProvider>
+                <App />
+              </GiftProvider>
+            </ChocolatesProvider>
+          </CandyProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>

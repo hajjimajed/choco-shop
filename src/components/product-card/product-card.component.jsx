@@ -14,7 +14,19 @@ const ProductCard = ({ product }) => {
     const { name, price, imageUrl, route } = product;
 
     const navigate = useNavigate();
-    const onNavigateHandler = () => navigate(`/${route}`)
+    const onNavigateHandler = () => {
+        const firstTwoChars = route.slice(0, 2);
+        if (firstTwoChars === 'cn') {
+            navigate(`/candy-product/${route}`)
+        }
+        else if (firstTwoChars === 'gf') {
+            navigate(`/gift-product/${route}`)
+        }
+        else {
+            navigate(`/chocolate-product/${route}`)
+        }
+
+    }
 
     const dispatch = useDispatch();
     const cartItems = useSelector(selectCartItems);

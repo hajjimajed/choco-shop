@@ -9,6 +9,7 @@ import Authentification from './routes/authentification/authentification.compone
 import Checkout from './routes/checkout/checkout.component';
 import ProductPage from './routes/product-page/product-page.component';
 import CandyPage from './routes/candy-page/candy-page.component';
+import GiftPage from './routes/gift-page/gift-page.component';
 
 import { useEffect } from 'react';
 import { onAuthStateChangedListener, createUserDocumentFromAuth } from './utils/firebase/firebase.utils';
@@ -41,8 +42,9 @@ const App = () => {
         <Route path='gifts/*' element={<Gifts />} />
         <Route path='auth' element={<Authentification />} />
         <Route path='checkout' element={<Checkout />} />
-        <Route path='/*' element={<ProductPage />} />
-        <Route path='cndy/*' element={<CandyPage />} />
+        <Route path='chocolate-product/*' element={<ProductPage />} />
+        <Route path='candy-product/*' element={<CandyPage />} />
+        <Route path='gift-product/*' element={<GiftPage />} />
 
       </Route>
     </Routes>
