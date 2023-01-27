@@ -1,14 +1,19 @@
 import './product-page-view.styles.scss'
 
 import { addItemToCart } from '../../store/cart/cart.action';
+import { selectCartItems } from '../../store/cart/cart.selector';
 
 import Button from '../button/button.component';
+
+import { useSelector, useDispatch } from 'react-redux';
 
 const ProductPageView = ({ product }) => {
 
     const { name, price, imageUrl } = product;
 
-    const addProductToCart = () => addItemToCart(product);
+    const dispatch = useDispatch();
+    const cartItems = useSelector(selectCartItems);
+    const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
 
 
