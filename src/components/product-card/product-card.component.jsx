@@ -41,13 +41,13 @@ const ProductCard = ({ product }) => {
 
             <img src={imageUrl} alt={name} />
             <div className='add'>
-                <Button id='btn1' buttonType='add' onClick={addProductToCart}>+ Add</Button>
+                <Button id='btn1' buttonType='add2' onClick={addProductToCart}>+ Add</Button>
+                <Button id='btn1' buttonType='add' onClick={onNavigateHandler}>Details</Button>
             </div>
             <div className='footer'>
                 <span className='price'>${price}</span>
                 <span className='name' onClick={onNavigateHandler} >{name}</span>
             </div>
-            <Button id='btn2' onClick={onNavigateHandler} buttonType='inverted' >Details</Button>
 
 
 

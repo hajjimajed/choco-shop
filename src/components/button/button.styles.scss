@@ -51,13 +51,24 @@
         border-radius: 25px;
 
         &:hover {
-            background-color: #0088a3;
+            background-color: #00b4d8a0;
+        }
+    }
+
+    &.add2 {
+        background-color: #f72585;
+        color: white;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: #f72584a0;
         }
     }
 
     &.inverted {
         background-color: #6a4c93;
         color: white;
+        border-radius: 25px;
 
 
         &:hover {
