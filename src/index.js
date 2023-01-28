@@ -4,6 +4,9 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Elements } from '@stripe/react-stripe-js';
+import { stripePromise } from './utils/stripe/stripe.utils';
+
 import { BrowserRouter } from 'react-router-dom'
 
 import { Provider } from 'react-redux';
@@ -23,7 +26,9 @@ root.render(
           <CandyProvider>
             <ChocolatesProvider>
               <GiftProvider>
-                <App />
+                <Elements stripe={stripePromise}>
+                  <App />
+                </Elements>
               </GiftProvider>
             </ChocolatesProvider>
           </CandyProvider>
