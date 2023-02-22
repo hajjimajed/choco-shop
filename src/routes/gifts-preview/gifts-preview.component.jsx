@@ -1,4 +1,6 @@
 import { useContext, Fragment } from "react";
+import './gifts-preview.styles.scss'
+import Footer from "../../components/footer/footer.component";
 
 import { GiftContext } from "../../contexts/gifts.context";
 
@@ -10,6 +12,13 @@ const GiftsPreview = () => {
 
     return (
         <Fragment>
+
+            <div className='gifts-preview-header'>
+                <div className='section-one'></div>
+                <div className='section-two'>
+                    <img src="https://i.ibb.co/LJ42BMg/melted-pink.png" alt="" />
+                </div>
+            </div>
             {
                 Object.keys(giftsMap).map(title => {
                     const products = giftsMap[title];
@@ -17,6 +26,8 @@ const GiftsPreview = () => {
                     return <CategoryPreview key={title} title={title} products={products}></CategoryPreview>
                 })
             }
+
+            <Footer />
         </Fragment>
     )
 

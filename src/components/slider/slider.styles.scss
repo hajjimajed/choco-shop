@@ -1,9 +1,9 @@
 .slider-container {
-    position: absolute;
-    height: 120vh;
+    height: 130vh;
     width: 100%;
     overflow: hidden;
-    top: 0;
+    position: relative;
+    transform: translateY(-80px);
 
     .slide {
         position: absolute;

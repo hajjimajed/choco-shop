@@ -1,6 +1,7 @@
 import './chocolates.preview.styles.scss'
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 import { ReactComponent as Melted } from '../../assets/melted.svg'
+import Footer from '../../components/footer/footer.component';
 
 import { Fragment } from 'react';
 
@@ -29,6 +30,7 @@ const ChocolatesPreview = () => {
                 })
             }
 
+            <Footer />
 
 
         </Fragment>

@@ -10,9 +10,6 @@ const ChocolateBars = () => {
             <div className='bars-container'>
 
             </div>
-            <div className='bottom-melted'>
-                <img src="https://cdn.shopify.com/s/files/1/0029/2015/3137/t/30/assets/bars-bg-6611.png" alt="" />
-            </div>
         </div>
     )
 }
