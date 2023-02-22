@@ -10,6 +10,7 @@ import Checkout from './routes/checkout/checkout.component';
 import ProductPage from './routes/product-page/product-page.component';
 import CandyPage from './routes/candy-page/candy-page.component';
 import GiftPage from './routes/gift-page/gift-page.component';
+import PaymentForm from './components/payment-form/payment-form.component';
 
 import { useEffect } from 'react';
 import { onAuthStateChangedListener, createUserDocumentFromAuth } from './utils/firebase/firebase.utils';
@@ -45,6 +46,7 @@ const App = () => {
         <Route path='chocolate-product/*' element={<ProductPage />} />
         <Route path='candy-product/*' element={<CandyPage />} />
         <Route path='gift-product/*' element={<GiftPage />} />
+        <Route path='payment' element={<PaymentForm />} />
 
       </Route>
     </Routes>

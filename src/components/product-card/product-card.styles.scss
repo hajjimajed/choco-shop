@@ -1,78 +1,80 @@
 .product-card-container {
-    width: 100%;
+    width: 280px;
     display: flex;
     flex-direction: column;
-    height: 350px;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 440px;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-bottom: 100px;
-    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 50px;
 
-    img {
+    .product-image {
         width: 100%;
-        height: 95%;
-        object-fit: cover;
-        margin-bottom: 5px;
-    }
-
-    .add {
+        height: 60%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
 
-        #btn1 {
-            width: 40%;
-            margin-top: 60px;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            font-size: 16px;
-            font-weight: 500;
-        }
-    }
-
-    &:hover {
         img {
-            opacity: 0.8;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            margin-bottom: 5px;
         }
 
-        #btn2 {
-            opacity: 1;
-            display: flex;
-        }
     }
 
-    .footer {
-        width: 100%;
-        height: 5%;
+    .product-info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-size: 18px;
-        margin: 15px 0;
+        height: 40%;
+        width: 100%;
 
-        .name {
-            width: 75%;
+        .product-name {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.1s ease-in-out all;
+            h1 {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                text-transform: capitalize;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
 
-            &:hover {
-                color: #6a4c93;
+            h2 {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                text-transform: capitalize;
+                color: #f78764;
+                margin-right: 20px;
+                margin-top: 10px;
             }
         }
 
-        .price {
-            width: 25%;
-            font-weight: 400;
-            color: #6a4c93;
-            margin-bottom: 10px;
+        .description {
+            margin: 0 20px;
 
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 22px;
+                text-transform: capitalize;
+            }
+        }
+
+        .buttons-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }

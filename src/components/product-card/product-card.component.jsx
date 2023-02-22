@@ -38,8 +38,24 @@ const ProductCard = ({ product }) => {
 
 
         <div className='product-card-container'>
+            <div className='product-image'>
+                <img src={imageUrl} alt={name} />
+            </div>
 
-            <img src={imageUrl} alt={name} />
+            <div className='product-info'>
+                <div className='product-name'>
+                    <h1 className='name' onClick={onNavigateHandler} >{name}</h1>
+                    <h2 className='price'>${price}</h2>
+                </div>
+                <div className='description'>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque iste sit</p>
+                </div>
+                <div className='buttons-container'>
+                    <Button id='btn1' buttonType='add2' onClick={addProductToCart}>+ Add</Button>
+                    <Button id='btn1' buttonType='add' onClick={onNavigateHandler}>Details</Button>
+                </div>
+            </div>
+            {/* 
             <div className='add'>
                 <Button id='btn1' buttonType='add2' onClick={addProductToCart}>+ Add</Button>
                 <Button id='btn1' buttonType='add' onClick={onNavigateHandler}>Details</Button>
@@ -49,7 +65,7 @@ const ProductCard = ({ product }) => {
                 <span className='name' onClick={onNavigateHandler} >{name}</span>
             </div>
 
-
+*/}
 
         </div>
 

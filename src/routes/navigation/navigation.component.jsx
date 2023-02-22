@@ -42,10 +42,6 @@ const Navigation = () => {
                     <Link className="nav-link" to='/gifts'>
                         Gifts
                     </Link>
-                </div>
-
-                <div className='nav-icons'>
-
                     {
                         currentUser ? (
                             <span className='nav-link nav-btn' onClick={signOutUser}>Sign Out</span>)
@@ -59,6 +55,8 @@ const Navigation = () => {
 
                     {isCartOpen && <CartDropdown />}
                 </div>
+
+
 
 
             </div>

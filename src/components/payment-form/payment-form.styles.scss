@@ -17,4 +17,28 @@
             width: 500px;
         }
     }
+
+    .payment-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+
+        .payment-item-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .image-container {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+
+
+    }
 }

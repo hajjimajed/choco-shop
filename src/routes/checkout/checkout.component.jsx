@@ -2,14 +2,19 @@ import './checkout.styles.scss'
 
 import { useSelector } from 'react-redux';
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
+import { useNavigate } from 'react-router-dom';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
-import PaymentForm from '../../components/payment-form/payment-form.component';
+import Button from '../../components/button/button.component';
 
 const Checkout = () => {
 
     const cartItems = useSelector(selectCartItems);
     const cartTotal = useSelector(selectCartTotal);
+
+    const navigate = useNavigate();
+
+    const onNavigateHandler = () => navigate('/payment')
 
     return (
         <div className='checkout-container'>
@@ -39,7 +44,7 @@ const Checkout = () => {
 
             <span className='total'>Total: ${cartTotal}</span>
 
-            <PaymentForm />
+            <Button onClick={onNavigateHandler}>Payment</Button>
 
         </div>
     )

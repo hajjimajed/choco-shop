@@ -6,60 +6,44 @@
     align-items: center;
     align-content: center;
     margin-bottom: 25px;
-    font-family: 'Oleo Script', cursive;
+    padding: 20px 50px 0 50px;
+
 
     .logo-container {
         height: 100%;
         width: 70px;
+        z-index: 100;
     }
 
     .nav-links-container {
-        width: 50%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+        z-index: 100;
 
         .nav-link {
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 22px;
+            color: #fff;
+            font-size: 30px;
             font-weight: 500;
-            transition: 0.1s ease-in-out all;
-            color: #f72585;
+            text-decoration: none;
+            transition: color .3s ease;
+            letter-spacing: .5px;
+            margin-right: 35px;
+
 
             &:hover {
-                color: #ff70a6;
+                color: #000000;
             }
         }
     }
 
-    .nav-btn {
-        cursor: pointer;
-        font-size: 22px;
-        font-weight: 500;
-        width: 90px;
-        height: 35px;
-        border: none;
-        border-radius: 20px;
-        color: #f72585;
-
-        text-align: center;
-        padding-top: 5px;
-
-        &:hover {
-            color: #ff70a6;
-        }
 
 
 
 
-    }
 
-    .nav-icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
 
 }

@@ -1,0 +1,98 @@
+.footer-container {
+    width: 100vw;
+    height: 55vh;
+    background: #774e24;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 180vh;
+    padding-bottom: 30px;
+
+    .footer-info {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .footer-title {
+                font-size: 25px;
+                line-height: 30px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 25px;
+            }
+
+            .footer-link {
+                text-decoration: none;
+                margin-bottom: 10px;
+
+                &:hover h2 {
+                    color: #000000;
+                }
+            }
+
+            h2 {
+                font-size: 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 300;
+                transition: 0.2s ease-in all;
+            }
+
+            .social-media {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    width: 30px;
+                    height: auto;
+                    margin-left: 20px;
+                    cursor: pointer;
+
+                    &:first-child {
+                        width: 38px;
+                        height: auto;
+                    }
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 90%;
+        height: 1px;
+        background: #fff;
+    }
+
+    .footer-about {
+        width: 90%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: capitalize;
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+}

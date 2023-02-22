@@ -8,14 +8,19 @@
     cursor: pointer;
 
     .shopping-icon {
-        width: 24px;
-        height: 24px;
+        width: 40px;
+        height: auto;
+
+        path {
+            fill: #fff;
+        }
     }
 
     .item-count {
         position: absolute;
-        font-size: 10px;
-        font-weight: bold;
-        bottom: 12px;
+        font-size: 16px;
+        font-weight: 400;
+        bottom: 7px;
+        color: #fff;
     }
 }

@@ -2,7 +2,9 @@
 import { Outlet } from "react-router-dom";
 
 import Directory from "../../components/directory/directory.component";
-
+import Slider from "../../components/slider/slider.component";
+import ChocolateBars from "../../components/chocolate-bars/chocolate-bars.component";
+import Footer from "../../components/footer/footer.component";
 
 const Home = () => {
 
@@ -51,7 +53,11 @@ const Home = () => {
 
             <Outlet />
 
-            <Directory categories={categories} />
+            <Slider />
+
+            <ChocolateBars />
+
+            <Footer />
 
 
         </div>

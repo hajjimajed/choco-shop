@@ -3,7 +3,7 @@ import './payment-form.styles.scss'
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import { selectCartTotal } from "../../store/cart/cart.selector"
+import { selectCartTotal, selectCartItems } from "../../store/cart/cart.selector"
 import { selectCurrentUser } from "../../store/user/user.selector"
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
@@ -15,7 +15,14 @@ const PaymentForm = () => {
     const elements = useElements();
 
     const amount = useSelector(selectCartTotal)
-    const currentUser = useSelector(selectCurrentUser)
+    const currentUser = useSelector(selectCurrentUser);
+
+
+    const cartItems = useSelector(selectCartItems);
+
+
+
+
 
     const [isProcessingPayment, setIsProcessingPayment] = useState(false)
 
@@ -61,6 +68,23 @@ const PaymentForm = () => {
 
     return (
         <div className='payment-form-container'>
+            <div className='payment-items'>
+                {
+                    cartItems.map((cartItem) => (
+                        <div className='payment-item-container' key={cartItem.name}>
+                            <div className='image-container'>
+                                <img src={cartItem.imageUrl} alt={`${cartItem.name}`} />
+                            </div>
+                            <span className='name'>{cartItem.name}</span>
+                            <span className='quantity'>
+                                <span className='value'>{cartItem.quantity}</span>
+                            </span>
+                            <span className='price'>{cartItem.price}</span>
+                        </div>
+                    ))
+                }
+
+            </div>
             <form className='form-container' onSubmit={paymentHandler}>
                 <h2>Credit Card Payment</h2>
                 <CardElement id='ce' />
