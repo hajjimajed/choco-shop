@@ -136,6 +136,10 @@
     .top-melted {
         transform: translateY(7px);
     }
+
+    .footer-container {
+        height: 45vh;
+    }
 }
 
 @media (max-width: 686px) {
@@ -161,9 +165,11 @@
     .footer-container .footer-info .footer-menu .social-media .icon {
         width: 20px;
     }
-}
 
-@media(max-width:600px) {
+    .footer-container {
+        height: 50vh;
+    }
+
     .footer-container .footer-info {
         width: 90%;
         display: flex;
@@ -172,6 +178,20 @@
         align-items: stretch;
     }
 }
+
+@media(max-width:450px) {
+    .footer-container {
+        height: 60vh;
+    }
+}
+
+@media(max-width:400px) {
+    .footer-container {
+        height: 70vh;
+    }
+}
+
+
 
 @media(max-width:300px) {
     .footer-container {

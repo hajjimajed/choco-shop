@@ -1,9 +1,9 @@
 .sign-up-container {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 30%;
-    margin: 50px;
+    width: 45vw;
     padding: 50px;
     height: 80vh;
+    margin: 25px;
 
     h1 {
         margin: 10px 0;
@@ -21,5 +21,32 @@
         text-transform: capitalize;
         font-weight: 500;
         color: #fd7e99;
+    }
+}
+
+@media(max-width:1000px) {
+    .sign-up-container {
+        width: 90vw;
+    }
+}
+
+
+@media(max-width:400px) {
+    .sign-up-container h1 {
+        font-size: 26px;
+    }
+
+    .sign-up-container h2 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:280px) {
+    .sign-up-container h1 {
+        font-size: 22px;
+    }
+
+    .sign-up-container h2 {
+        font-size: 16px;
     }
 }
