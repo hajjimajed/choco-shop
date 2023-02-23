@@ -20,8 +20,9 @@
     }
 
     &.google-sign-in {
-        background-color: #d4a373;
+        background-color: #457b9d;
         color: white;
+        width: 100%;
 
         &:hover {
             background-color: #000000;
@@ -29,17 +30,20 @@
     }
 
     &.google-sign-up {
-        background-color: #457b9d;
+        background-color: #07cec6;
         color: white;
+        width: 100%;
+        margin: 0;
 
         &:hover {
-            background-color: #5d9bc2;
+            background-color: #b07d62;
         }
     }
 
     &.google {
         background-color: #e63946;
         color: white;
+        width: 100%;
 
         &:hover {
             background-color: #f15e6a;
@@ -76,4 +80,49 @@
         }
     }
 
+    &.product {
+        width: 100%;
+        background-color: #07cec6;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        padding: 20px 30px;
+        margin: 0;
+
+
+        &:hover {
+            background-color: #b07d62;
+            color: #fff;
+            border: none;
+        }
+    }
+
+    &.cart {
+        width: 100%;
+        background-color: #07cec6;
+        color: #fff;
+        margin: 0;
+
+
+        &:hover {
+            background-color: #b07d62;
+            color: #fff;
+            border: none;
+        }
+    }
+
+}
+
+
+
+@media(max-width:600px) {
+    .button-container {
+        padding: 10px 18px;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 15px;
+    }
 }

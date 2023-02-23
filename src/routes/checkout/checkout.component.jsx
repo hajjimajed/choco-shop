@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import Button from '../../components/button/button.component';
+import Footer from '../../components/footer/footer.component'
 
 const Checkout = () => {
 
@@ -17,36 +18,37 @@ const Checkout = () => {
     const onNavigateHandler = () => navigate('/payment')
 
     return (
-        <div className='checkout-container'>
 
-            <div className='checkout-header'>
-                <div className='header-block'>
-                    <span>Product</span>
-                </div>
-                <div className='header-block'>
-                    <span>Description</span>
-                </div>
-                <div className='header-block'>
-                    <span>Quantity</span>
-                </div>
-                <div className='header-block'>
-                    <span>Price</span>
-                </div>
-                <div className='header-block'>
-                    <span>Remove</span>
+        <>
+
+            <div className='checkout-page-header'>
+                <div className='section-one'></div>
+                <div className='section-two'>
+                    <img src="https://i.ibb.co/QmCH5t0/melted-brown.png" alt="" />
                 </div>
             </div>
-            {
-                cartItems.map((cartItem) => (
-                    <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-                ))
-            }
 
-            <span className='total'>Total: ${cartTotal}</span>
+            <div className='checkout-container'>
 
-            <Button onClick={onNavigateHandler}>Payment</Button>
+                <div className='checkout-header'>
+                    <h1>checkout</h1>
+                </div>
+                <div className='line'></div>
+                {
+                    cartItems.map((cartItem) => (
+                        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+                    ))
+                }
 
-        </div>
+                <span className='total'>Total: ${cartTotal}</span>
+                <div className='button-container'>
+                    <Button buttonType='cart' onClick={onNavigateHandler}>Payment</Button>
+                </div>
+            </div>
+
+            <Footer />
+
+        </>
     )
 
 }

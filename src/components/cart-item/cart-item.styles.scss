@@ -1,23 +1,44 @@
 .cart-item-container {
     width: 100%;
     display: flex;
-    height: 80px;
-    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 10px 0;
 
     img {
-        width: 30%;
+        width: 50px;
+        height: auto;
     }
 
     .item-details {
         width: 70%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        padding: 10px 20px;
+        justify-content: flex-start;
 
         .name {
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        .pricing {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: #adb5bd;
+
+            span:first-child {
+                margin-right: 20px;
+                color: #ff7795;
+            }
         }
     }
 }

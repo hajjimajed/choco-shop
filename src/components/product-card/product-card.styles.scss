@@ -16,12 +16,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        overflow: hidden;
 
         img {
             width: 80%;
             height: 80%;
             object-fit: cover;
             margin-bottom: 5px;
+            transition: 0.3s ease-in all;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
         }
 
     }
@@ -38,6 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            cursor: pointer;
 
             h1 {
                 font-size: 16px;
@@ -76,5 +84,41 @@
             justify-content: space-between;
             align-items: center;
         }
+    }
+}
+
+
+@media(max-width:600px) {
+    .product-card-container {
+        width: 250px;
+        height: 390px;
+    }
+}
+
+@media(max-width:550px) {
+    .product-card-container {
+        width: 220px;
+        height: 350px;
+    }
+}
+
+@media(max-width:500px) {
+    .product-card-container {
+        width: 280px;
+        height: 440px;
+    }
+}
+
+@media(max-width:400px) {
+    .product-card-container {
+        width: 250px;
+        height: 390px;
+    }
+}
+
+@media(max-width:300px) {
+    .product-card-container {
+        width: 220px;
+        height: 350px;
     }
 }

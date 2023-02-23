@@ -1,5 +1,6 @@
 import './slider.styles.scss'
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { ReactComponent as LeftArrow } from '../../assets/left-arrow.svg'
 import { ReactComponent as RightArrow } from '../../assets/right-arrow.svg'
@@ -7,12 +8,21 @@ import { ReactComponent as RightArrow } from '../../assets/right-arrow.svg'
 import Button from '../button/button.component';
 
 const slides = [
-    { id: 1, imgUrl: 'https://i.ibb.co/VTKQTHP/Untitled-1.png', alt: 'Slide 1' },
-    { id: 2, imgUrl: 'https://i.ibb.co/fHMdKCd/dylan-nolte-SH-Ijr-Kw-G8c-unsplash.jpg', alt: 'Slide 2' },
-    { id: 3, imgUrl: 'https://i.ibb.co/Z8mjmwy/Untitled.png', alt: 'Slide 3' },
+    { id: 1, imgUrl: 'https://i.ibb.co/VTKQTHP/Untitled-1.png', alt: 'Slide 1', text1: 'new kind of', text2: 'chocolate', link: '/chocolates' },
+    { id: 2, imgUrl: 'https://i.ibb.co/fHMdKCd/dylan-nolte-SH-Ijr-Kw-G8c-unsplash.jpg', alt: 'Slide 2', text1: 'hype yourself', text2: 'with new flavors', link: '/candys' },
+    { id: 3, imgUrl: 'https://i.ibb.co/Z8mjmwy/Untitled.png', alt: 'Slide 3', text1: 'gift someone', text2: 'you love', link: '/gifts' },
 ];
 
 const Slider = () => {
+    const navigate = useNavigate();
+
+    const navigationHandler = (id) => {
+        const slide = slides.find(s => s.id === id);
+        if (slide) {
+            navigate(slide.link);
+        }
+    }
+
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
@@ -45,9 +55,10 @@ const Slider = () => {
                             backgroundRepeat: 'no-repeat'
                         }}
                     >
-                        <h1>a new kind of</h1>
-                        <h1>chocolate</h1>
-                        <Button buttonType='inverted'>explore now</Button>
+                        <h1>{slide.text1}</h1>
+                        <h1>{slide.text2}</h1>
+                        <Button onClick={() => navigationHandler(slide.id)} buttonType='inverted'>explore now</Button>
+                        <img src="https://i.ibb.co/pLJNzFQ/USA-SWEETS-1350x1350-removebg-preview.png" alt="" />
                     </div>
                 </div>
             ))}

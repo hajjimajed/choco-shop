@@ -8,6 +8,7 @@ import { selectCurrentUser } from "../../store/user/user.selector"
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import Button from '../button/button.component'
+import Footer from '../footer/footer.component';
 
 const PaymentForm = () => {
 
@@ -67,30 +68,43 @@ const PaymentForm = () => {
 
 
     return (
-        <div className='payment-form-container'>
-            <div className='payment-items'>
-                {
-                    cartItems.map((cartItem) => (
-                        <div className='payment-item-container' key={cartItem.name}>
-                            <div className='image-container'>
-                                <img src={cartItem.imageUrl} alt={`${cartItem.name}`} />
-                            </div>
-                            <span className='name'>{cartItem.name}</span>
-                            <span className='quantity'>
-                                <span className='value'>{cartItem.quantity}</span>
-                            </span>
-                            <span className='price'>{cartItem.price}</span>
-                        </div>
-                    ))
-                }
-
+        <>
+            <div className='payment-page-header'>
+                <div className='section-one'></div>
+                <div className='section-two'>
+                    <img src="https://i.ibb.co/QmCH5t0/melted-brown.png" alt="" />
+                </div>
             </div>
-            <form className='form-container' onSubmit={paymentHandler}>
-                <h2>Credit Card Payment</h2>
-                <CardElement id='ce' />
-                <Button>Pay Now</Button>
-            </form>
-        </div>
+
+            <div className='payment-form-container'>
+                <h1>payment</h1>
+                <div className='payment-items'>
+                    {
+                        cartItems.map((cartItem) => (
+                            <div className='payment-item-container' key={cartItem.name}>
+                                <div className='image-container'>
+                                    <img src={cartItem.imageUrl} alt={`${cartItem.name}`} />
+                                </div>
+                                <span className='name'>{cartItem.name}</span>
+                                <span className='quantity'>
+                                    <span className='value'>{cartItem.quantity}</span>
+                                </span>
+                                <span className='price'>${cartItem.price}</span>
+                            </div>
+                        ))
+                    }
+
+                </div>
+                <form className='form-container' onSubmit={paymentHandler}>
+                    <h2>Credit Card Payment</h2>
+                    <CardElement id='ce' />
+                    <Button buttonType='cart'>Pay Now</Button>
+                </form>
+            </div>
+
+            <Footer />
+
+        </>
     )
 }
 

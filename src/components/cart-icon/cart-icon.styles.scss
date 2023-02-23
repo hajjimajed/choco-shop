@@ -7,9 +7,22 @@
     justify-content: center;
     cursor: pointer;
 
+    &:hover {
+        .shopping-icon {
+            path {
+                fill: #000000;
+            }
+        }
+
+        .item-count {
+            color: #000000;
+        }
+    }
+
     .shopping-icon {
         width: 40px;
         height: auto;
+        transition: 0.2s ease-in-out all;
 
         path {
             fill: #fff;
@@ -22,5 +35,6 @@
         font-weight: 400;
         bottom: 7px;
         color: #fff;
+        transition: 0.1s ease-in-out all;
     }
 }

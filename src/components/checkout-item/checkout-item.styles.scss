@@ -2,14 +2,14 @@
     width: 100%;
     display: flex;
     min-height: 100px;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid #e8e8e1;
     padding: 15px 0;
     font-size: 20px;
     align-items: center;
+    justify-content: space-between;
 
     .image-container {
-        width: 23%;
-        padding-right: 15px;
+        width: 10%;
 
         img {
             width: 100%;
@@ -17,26 +17,47 @@
         }
     }
 
-    .name,
-    .quantity,
-    .price {
-        width: 23%;
+    .name {
+        font-size: 32px;
+        line-height: 36px;
+        text-transform: capitalize;
+        font-weight: 500;
+        color: #fd7e99;
     }
 
     .quantity {
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         .arrow {
             cursor: pointer;
+            font-size: 40px;
+            font-weight: 500;
+            color: #32c0c1;
         }
 
         .value {
-            margin: 0 10px;
+            margin: 0 50px;
+            font-size: 28px;
+            line-height: 10px;
+            text-transform: capitalize;
+            font-weight: 500;
         }
     }
 
+    .price {
+        font-size: 28px;
+        line-height: 10px;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
     .remove-button {
-        padding-left: 12px;
         cursor: pointer;
+        cursor: pointer;
+        font-size: 35px;
+        font-weight: 500;
+        color: #fd7e99;
     }
 }

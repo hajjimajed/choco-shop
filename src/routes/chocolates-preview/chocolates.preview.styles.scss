@@ -27,3 +27,9 @@
         }
     }
 }
+
+@media(max-width:300px) {
+    .chocolates-preview-header {
+        width: 120vw;
+    }
+}

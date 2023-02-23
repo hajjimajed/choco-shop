@@ -65,10 +65,10 @@ const SignUpForm = () => {
     }
 
     return (
-        <div>
+        <div className='sign-up-container'>
 
-            <h2></h2>
-            <span></span>
+            <h1>new member</h1>
+            <h2>register</h2>
 
             <form action="" onSubmit={handleSubmit}>
 

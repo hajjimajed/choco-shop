@@ -65,9 +65,9 @@ const SignInForm = () => {
 
 
     return (
-        <div className="sign-up-container">
-            <h2>Already have an account</h2>
-            <span>Sign in</span>
+        <div className="sign-in-container">
+            <h1>Already have an account</h1>
+            <h2>Sign in</h2>
 
             <form action="" onSubmit={handleSubmit}>
 
@@ -78,7 +78,7 @@ const SignInForm = () => {
 
                 <div className="buttons-container">
 
-                    <Button type='submit' buttonType='signUp' >Sign In</Button>
+                    <Button type='submit' buttonType='signIn' >Sign In</Button>
                     <Button buttonType='google' onClick={signInWithGoogle}  >Google</Button>
 
                 </div>
