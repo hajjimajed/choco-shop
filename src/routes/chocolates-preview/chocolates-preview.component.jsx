@@ -11,7 +11,6 @@ import { ChocolatesContext } from '../../contexts/chocolates.context';
 const ChocolatesPreview = () => {
 
     const { chocolatesMap } = useContext(ChocolatesContext);
-    console.log(chocolatesMap)
 
     return (
         <Fragment>
