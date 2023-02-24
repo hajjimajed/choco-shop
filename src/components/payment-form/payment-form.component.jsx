@@ -98,7 +98,9 @@ const PaymentForm = () => {
                 <form className='form-container' onSubmit={paymentHandler}>
                     <h2>Credit Card Payment</h2>
                     <CardElement id='ce' />
-                    <Button buttonType='cart'>Pay Now</Button>
+                    <div className='button-container'>
+                        <Button buttonType='cart'>Pay Now</Button>
+                    </div>
                 </form>
             </div>
 

@@ -9,7 +9,7 @@ const Authentification = () => {
     return (
 
         <>
-            <div className='checkout-page-header'>
+            <div className='auth-page-header'>
                 <div className='section-one'></div>
                 <div className='section-two'>
                     <img src="https://i.ibb.co/QmCH5t0/melted-brown.png" alt="" />

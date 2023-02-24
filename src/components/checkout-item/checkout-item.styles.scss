@@ -61,3 +61,109 @@
         color: #fd7e99;
     }
 }
+
+@media(max-width:900px) {
+    .checkout-item-container .name {
+        font-size: 26px;
+    }
+
+    .checkout-item-container .quantity .arrow {
+        font-size: 30px;
+    }
+
+    .checkout-item-container .remove-button {
+        font-size: 28px;
+    }
+
+    .checkout-item-container .quantity .value {
+        font-size: 26px;
+    }
+
+    .checkout-item-container .price {
+        font-size: 26px;
+    }
+}
+
+@media(max-width:800px) {
+    .checkout-item-container .name {
+        font-size: 22px;
+    }
+
+    .checkout-item-container .quantity .arrow {
+        font-size: 25px;
+    }
+
+    .checkout-item-container .remove-button {
+        font-size: 20px;
+    }
+
+    .checkout-item-container .quantity .value {
+        font-size: 20px;
+    }
+
+    .checkout-item-container .price {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:700px) {
+    .checkout-item-container .quantity .value {
+        margin: 0 30px;
+    }
+}
+
+@media(max-width:600px) {
+    .checkout-item-container .quantity .value {
+        margin: 0 20px;
+    }
+}
+
+@media(max-width:500px) {
+    .checkout-item-container .quantity .value {
+        margin: 0 10px;
+    }
+}
+
+@media(max-width:500px) {
+    .checkout-item-container .name {
+        font-size: 20px;
+    }
+
+    .checkout-item-container .quantity .arrow {
+        font-size: 22px;
+    }
+
+    .checkout-item-container .remove-button {
+        font-size: 16px;
+    }
+
+    .checkout-item-container .quantity .value {
+        font-size: 16px;
+    }
+
+    .checkout-item-container .price {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:400px) {
+    .checkout-item-container .name {
+        font-size: 16px;
+    }
+
+    .checkout-item-container .quantity .arrow {
+        font-size: 16px;
+    }
+
+    .checkout-item-container .remove-button {
+        font-size: 14px;
+    }
+
+    .checkout-item-container .quantity .value {
+        font-size: 14px;
+    }
+
+    .checkout-item-container .price {
+        font-size: 14px;
+    }
+}

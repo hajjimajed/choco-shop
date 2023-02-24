@@ -23,6 +23,10 @@
         align-items: center;
         justify-content: space-between;
 
+        .button-container {
+            width: 70%;
+        }
+
         h2 {
             font-size: 32px;
             line-height: 36px;
@@ -93,5 +97,71 @@
             height: auto;
             transform: rotate(180deg);
         }
+    }
+}
+
+@media(max-width:900px) {
+    .payment-form-container .payment-items {
+        width: 60%;
+    }
+}
+
+@media(max-width:700px) {
+    .payment-form-container h1 {
+        font-size: 26px;
+    }
+
+    .payment-form-container .form-container h2 {
+        font-size: 26px;
+    }
+
+    .payment-form-container .payment-items {
+        width: 70%;
+    }
+}
+
+@media(max-width:600px) {
+    .payment-form-container .form-container #ce {
+        width: 450px;
+    }
+
+    .payment-form-container .payment-items {
+        width: 80%;
+    }
+}
+
+@media(max-width:500px) {
+    .payment-form-container .form-container #ce {
+        width: 400px;
+    }
+
+    .payment-form-container .payment-items {
+        width: 90%;
+    }
+}
+
+@media(max-width:400px) {
+    .payment-form-container .form-container #ce {
+        width: 350px;
+    }
+
+    .payment-form-container .payment-items {
+        width: 95%;
+    }
+}
+
+@media(max-width:360px) {
+    .payment-form-container .form-container #ce {
+        width: 300px;
+    }
+}
+
+@media(max-width:300px) {
+    .payment-page-header {
+        width: 120vw;
+    }
+
+    .payment-form-container {
+        width: 120vw;
     }
 }

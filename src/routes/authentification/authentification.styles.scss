@@ -1,9 +1,8 @@
 .authetication-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 30px auto;
-    height: 120vh;
     padding-top: 25vh;
 }
 
@@ -41,5 +40,11 @@
     .authetication-container {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media(max-width:300px) {
+    .auth-page-header {
+        width: 120vw;
     }
 }

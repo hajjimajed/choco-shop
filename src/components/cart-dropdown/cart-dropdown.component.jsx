@@ -1,4 +1,7 @@
 import './cart-dropdown.styles.scss'
+import { useDispatch } from 'react-redux';
+import { setIsCartOpen } from '../../store/cart/cart.action';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
 import Button from '../button/button.component';
 import CartItem from '../cart-item/cart-item.component';
@@ -23,8 +26,10 @@ const CartDropdown = () => {
         navigate('/checkout')
     }
 
+    const dispatch = useDispatch();
+    const isCartOpen = useSelector(selectIsCartOpen);
 
-
+    const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen));
 
     return (
         <>
@@ -46,7 +51,7 @@ const CartDropdown = () => {
                         cartItems.map(cartItem => <CartItem key={cartItem.name} cartItem={cartItem} />)
                     }
                 </div>
-                <Button buttonType='cart' onClick={goToCheckoutHandler}>chekout</Button>
+                <Button buttonType='cart' onClick={() => { goToCheckoutHandler(); toggleIsCartOpen() }}>chekout</Button>
             </div>
         </>
     )
