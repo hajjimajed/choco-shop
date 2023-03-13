@@ -1,5 +1,5 @@
 .slider-container {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -19,7 +19,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
 
             div {
@@ -47,9 +47,9 @@
             }
 
             img {
-                margin-top: 0;
-                width: 50%;
+                width: 30%;
                 height: auto;
+
             }
         }
 

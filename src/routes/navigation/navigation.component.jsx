@@ -44,7 +44,7 @@ const Navigation = () => {
 
             <div className='navigation'>
                 <Link className='logo-container' to='/'>
-                    <CrwnLogo className='logo' />
+                    <img className='main-logo' src="https://i.ibb.co/gDQTwtR/chocos.png" alt="" />
                 </Link>
 
                 <div className='nav-container'>
