@@ -44,7 +44,7 @@ const Navigation = () => {
 
             <div className='navigation'>
                 <Link className='logo-container' to='/'>
-                    <img className='main-logo' src="https://i.ibb.co/gDQTwtR/chocos.png" alt="" />
+                    <img className='main-logo' src="https://i.ibb.co/44y9wSS/Group-3.png" alt="" />
                 </Link>
 
                 <div className='nav-container'>

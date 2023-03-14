@@ -1,5 +1,5 @@
 .slider-container {
-    height: 120vh;
+    height: 125vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -19,7 +19,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
 
             div {
@@ -38,18 +38,13 @@
                 text-transform: uppercase;
                 font-weight: 500;
                 margin-bottom: 50px;
-
-                &:first-child {
-                    margin-top: 80px;
-                    margin-bottom: 0;
-                }
-
+                margin-top: 100px;
             }
 
             img {
-                width: 30%;
+                width: 60%;
                 height: auto;
-
+                margin-top: 30px;
             }
         }
 
@@ -98,22 +93,33 @@
     }
 }
 
+@media(max-width:900px) {
+    .slider-container .arrow-right {
+        right: 10px;
+    }
+
+    .slider-container .arrow-left {
+        left: 10px;
+    }
+}
+
 @media(max-width:800px) {
     .slider-container .arrow-left {
         width: 40px;
-        left: 10px;
     }
 
     .slider-container .arrow-right {
         width: 40px;
-        right: 10px;
     }
 
     .slider-container .slide .slide-content h1 {
         font-size: 40px;
-        margin-bottom: 20px;
     }
 
+}
+
+@media(max-width:700px) {
+    .slider-container .slide .slide-content img {}
 }
 
 @media(max-width:600px) {
@@ -129,8 +135,28 @@
 
     .slider-container .slide .slide-content h1 {
         font-size: 30px;
-        margin-bottom: 15px;
     }
+
+    .slider-container .slide .slide-content img {}
+}
+
+@media (max-width: 550px) {
+    .slider-container {
+        height: 85vh;
+    }
+}
+
+@media(max-width:500px) {
+    .slider-container .slide .slide-content img {}
+}
+
+@media(max-width:400px) {
+    .slider-container .slide .slide-content img {}
+
+    .slider-container {
+        height: 75vh;
+    }
+
 }
 
 @media(max-width:350px) {
@@ -148,6 +174,8 @@
         font-size: 25px;
         margin-bottom: 15px;
     }
+
+    .slider-container .slide .slide-content img {}
 }
 
 @media(max-width:300px) {

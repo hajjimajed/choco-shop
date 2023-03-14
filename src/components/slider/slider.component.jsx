@@ -8,9 +8,9 @@ import { ReactComponent as RightArrow } from '../../assets/right-arrow.svg'
 import Button from '../button/button.component';
 
 const slides = [
-    { id: 1, imgUrl: 'https://i.ibb.co/VTKQTHP/Untitled-1.png', imgUrl2: 'https://i.ibb.co/G9vGHjK/ch.png', alt: 'Slide 1', text1: 'new kind of', text2: 'chocolate', link: '/chocolates' },
-    { id: 2, imgUrl: 'https://i.ibb.co/fHMdKCd/dylan-nolte-SH-Ijr-Kw-G8c-unsplash.jpg', imgUrl2: 'https://i.ibb.co/hZg5Nw2/cn.png', alt: 'Slide 2', text1: 'hype yourself', text2: 'with new flavors', link: '/candys' },
-    { id: 3, imgUrl: 'https://i.ibb.co/Z8mjmwy/Untitled.png', imgUrl2: 'https://i.ibb.co/b3Y4SSb/pngwing-com-5.png', alt: 'Slide 3', text1: 'gift someone', text2: 'you love', link: '/gifts' },
+    { id: 1, imgUrl: 'https://i.ibb.co/VTKQTHP/Untitled-1.png', imgUrl2: 'https://i.ibb.co/SfMKNtC/chocolate.png', alt: 'Slide 1', text1: 'Our Chocolate', text2: 'chocolate', link: '/chocolates' },
+    { id: 2, imgUrl: 'https://i.ibb.co/fHMdKCd/dylan-nolte-SH-Ijr-Kw-G8c-unsplash.jpg', imgUrl2: 'https://i.ibb.co/Dt24pw7/candys.png', alt: 'Slide 2', text1: 'Our Candys', text2: 'with new flavors', link: '/candys' },
+    { id: 3, imgUrl: 'https://i.ibb.co/Z8mjmwy/Untitled.png', imgUrl2: 'https://i.ibb.co/pJGhZp5/gift.png', alt: 'Slide 3', text1: 'Our Gifts', text2: 'you love', link: '/gifts' },
 ];
 
 const Slider = () => {
@@ -57,7 +57,6 @@ const Slider = () => {
                     >
                         <div>
                             <h1>{slide.text1}</h1>
-                            <h1>{slide.text2}</h1>
                             <Button onClick={() => navigationHandler(slide.id)} buttonType='inverted'>explore now</Button>
                         </div>
 
