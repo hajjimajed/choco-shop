@@ -21,7 +21,7 @@ const images = [
 
 const ProductPageView = ({ product }) => {
 
-    const { name, price, imageUrl } = product;
+    const { name, price } = product;
 
     const dispatch = useDispatch();
     const cartItems = useSelector(selectCartItems);
